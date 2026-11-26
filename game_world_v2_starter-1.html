@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GAME WORLD - اكتشف ألعاب الكمبيوتر، معلوماتها ومتطلبات التشغيل وروابط المصادر الرسمية.">
+<title>GAME WORLD | عالم الألعاب</title>
+<style>
+:root{--bg:#070b14;--panel:#101827;--panel2:#0c1422;--text:#edf4ff;--muted:#9aabc4;--blue:#24a8ff;--cyan:#35e0e8;--line:#1c2b42}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#12335b 0,transparent 32%),var(--bg);color:var(--text);font-family:Arial,Tahoma,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#080e1bea;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1180px;margin:auto;padding:0 18px}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{font-size:23px;font-weight:900;letter-spacing:1px;color:white}.logo span{color:var(--cyan)}
+button,input,select{font:inherit}.btn{background:linear-gradient(120deg,var(--blue),#1768d4);color:white;border:0;border-radius:10px;padding:10px 15px;font-weight:bold;cursor:pointer}
+.btn.secondary{background:#17243a;border:1px solid #29415f}.hero{padding:48px 0 25px;text-align:center}.eyebrow{color:var(--cyan);font-weight:bold;letter-spacing:2px;font-size:12px}
+h1{font-size:clamp(32px,6vw,58px);margin:12px 0;background:linear-gradient(90deg,#fff,#66d8ff);background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:650px;margin:0 auto 22px;line-height:1.8}
+.ad{border:1px dashed #38516e;background:#0b1422;border-radius:12px;color:#8298b4;text-align:center;min-height:86px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;margin:22px auto;padding:12px;font-size:12px}
+.ad strong{color:#b9cce4;font-size:11px;letter-spacing:1px}.ad small{font-size:11px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.tools input,.tools select{background:#101b2c;color:white;border:1px solid var(--line);border-radius:10px;padding:12px;min-width:150px;flex:1}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:22px}.muted{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.game{background:linear-gradient(150deg,#14233a,#0d1523);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.2s}.game:hover{transform:translateY(-3px);border-color:#267fba}
+.cover{height:130px;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;letter-spacing:1px;background:radial-gradient(circle at 70% 20%,#1b78a5,#101b31 60%,#0a101b)}
+.game:nth-child(3n+2) .cover{background:radial-gradient(circle at 70% 20%,#6b3a8b,#17172e 60%,#0a101b)}
+.game:nth-child(3n) .cover{background:radial-gradient(circle at 70% 20%,#87602b,#202033 60%,#0a101b)}
+.info{padding:13px}.info h3{margin:0 0 7px;font-size:16px}.info p{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.6}.tag{display:inline-block;background:#122b43;color:#79d5ff;border-radius:20px;padding:5px 9px;font-size:11px}
+.actions{display:flex;gap:8px;margin-top:12px}.actions button{flex:1;padding:9px 7px;font-size:12px}
+.notice{border:1px solid #28405b;background:#0c1727;border-radius:13px;padding:16px;color:#b5c5db;line-height:1.8;font-size:13px;margin:26px 0}
+footer{border-top:1px solid var(--line);margin-top:45px;padding:25px 0;color:var(--muted);font-size:12px;line-height:1.8}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.dialog{max-width:480px;width:100%;background:#111d2e;border:1px solid #2a4566;border-radius:16px;padding:22px}.dialog h2{margin-top:0}.dialog p{color:#bdcce0;line-height:1.8}.close{float:left}
+[dir="ltr"] .close{float:right}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{height:64px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:9px}.cover{height:105px;font-size:21px}.info{padding:10px}.info h3{font-size:14px}.actions{flex-direction:column}.hero{padding-top:35px}.logo{font-size:19px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="logo">GAME <span>WORLD</span></div><button class="btn secondary" id="lang">English</button></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow" data-ar="منصتك لعالم الألعاب" data-en="YOUR GAMING UNIVERSE">منصتك لعالم الألعاب</div>
+<h1>GAME WORLD</h1><p data-ar="اكتشف أشهر ألعاب الكمبيوتر، تعرّف على متطلبات تشغيلها، وابحث عن المصادر الرسمية والخيارات المناسبة لجهازك." data-en="Discover popular PC games, check their system requirements, and find official sources and options for your device.">اكتشف أشهر ألعاب الكمبيوتر، تعرّف على متطلبات تشغيلها، وابحث عن المصادر الرسمية والخيارات المناسبة لجهازك.</p>
+<button class="btn" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" data-ar="استكشف الألعاب" data-en="Explore games">استكشف الألعاب</button></section>
+<div class="ad"><strong>ADVERTISEMENT</strong><span data-ar="مساحة إعلانية علوية" data-en="Top advertising space">مساحة إعلانية علوية</span><small data-ar="ستظهر الإعلانات هنا بعد قبول الموقع في شبكة إعلانية" data-en="Ads will appear here after the site is approved by an ad network">ستظهر الإعلانات هنا بعد قبول الموقع في شبكة إعلانية</small></div>
+<section id="catalog"><div class="section-head"><div><h2 data-ar="مكتبة الألعاب" data-en="Game Library">مكتبة الألعاب</h2><div class="muted" data-ar="ابحث واختر لعبتك" data-en="Search and choose a game">ابحث واختر لعبتك</div></div></div>
+<div class="tools"><input id="search" placeholder="ابحث عن لعبة..." aria-label="Search games"><select id="filter"><option value="all">كل التصنيفات</option><option value="action">أكشن ومغامرات</option><option value="racing">سباق</option><option value="shooter">تصويب</option></select></div>
+<div class="grid" id="games"></div></section>
+<div class="ad"><strong>ADVERTISEMENT</strong><span data-ar="مساحة إعلانية وسط المحتوى" data-en="In-content advertising space">مساحة إعلانية وسط المحتوى</span><small data-ar="بعيدة عن أزرار الألعاب والروابط" data-en="Kept away from game buttons and links">بعيدة عن أزرار الألعاب والروابط</small></div>
+<section class="notice"><strong data-ar="مهم قبل التحميل أو اللعب" data-en="Before downloading or playing">مهم قبل التحميل أو اللعب</strong><br><span data-ar="هذا الموقع دليل للألعاب ومعلوماتها. لا نوفر نسخاً مقرصنة أو ملفات غير موثوقة. سنضيف روابط المتاجر والمصادر الرسمية، ومحتوى أصلياً يساعدك على اختيار الألعاب المناسبة لجهازك." data-en="This site is a guide to games and their information. We do not provide pirated copies or untrusted files. We will add official store links and original content to help you choose games for your device.">هذا الموقع دليل للألعاب ومعلوماتها. لا نوفر نسخاً مقرصنة أو ملفات غير موثوقة. سنضيف روابط المتاجر والمصادر الرسمية، ومحتوى أصلياً يساعدك على اختيار الألعاب المناسبة لجهازك.</span></section>
+<div class="ad"><strong>ADVERTISEMENT</strong><span data-ar="مساحة إعلانية سفلية" data-en="Bottom advertising space">مساحة إعلانية سفلية</span></div>
+</main>
+<footer><div class="wrap">© 2026 GAME WORLD · <span data-ar="حول الموقع | سياسة الخصوصية | اتصل بنا" data-en="About | Privacy Policy | Contact">حول الموقع | سياسة الخصوصية | اتصل بنا</span><br><span data-ar="موقع مستقل غير تابع لناشري الألعاب المذكورين." data-en="An independent site, not affiliated with the game publishers mentioned.">موقع مستقل غير تابع لناشري الألعاب المذكورين.</span></div></footer>
+<div class="modal" id="modal"><div class="dialog"><button class="btn secondary close" onclick="closeModal()">✕</button><h2 id="modalTitle"></h2><p id="modalText"></p><p class="muted" id="modalNote"></p></div></div>
+<script>
+const games=[
+["GTA San Andreas","أكشن ومغامرات","action","GTA SA"],["GTA V","أكشن ومغامرات","action","GTA V"],["Forza Horizon 3","سباق","racing","FORZA 3"],["Forza Horizon 4","سباق","racing","FORZA 4"],["Forza Horizon 5","سباق","racing","FORZA 5"],["Forza Horizon 6","سباق","racing","FORZA 6"],["Assassin’s Creed III","أكشن ومغامرات","action","AC III"],["Assassin’s Creed Odyssey","أكشن ومغامرات","action","ODYSSEY"],["Assassin’s Creed Unity","أكشن ومغامرات","action","UNITY"],["Red Dead Redemption 1","أكشن ومغامرات","action","RDR"],["Red Dead Redemption 2","أكشن ومغامرات","action","RDR 2"],["The Last of Us Part I","أكشن ومغامرات","action","TLOU I"],["The Last of Us Part II","أكشن ومغامرات","action","TLOU II"],["Uncharted Collection","أكشن ومغامرات","action","UNCHARTED"],["Tomb Raider","أكشن ومغامرات","action","TOMB RAIDER"],["Call of Duty: Black Ops","تصويب","shooter","BLACK OPS"]];
+let lang="ar";
+function render(){let q=document.getElementById('search').value.toLowerCase(),f=document.getElementById('filter').value;let list=games.filter(g=>(g[0].toLowerCase().includes(q)||g[1].includes(q))&&(f==="all"||g[2]===f));document.getElementById('games').innerHTML=list.map((g,i)=>`<article class="game"><div class="cover">${g[3]}</div><div class="info"><h3>${g[0]}</h3><p>${g[1]}</p><span class="tag">${lang==="ar"?"دليل اللعبة":"Game guide"}</span><div class="actions"><button class="btn secondary" onclick="details('${g[0].replace(/'/g,"\\'")}')">${lang==="ar"?"التفاصيل":"Details"}</button><button class="btn" onclick="details('${g[0].replace(/'/g,"\\'")}')">${lang==="ar"?"المصادر":"Sources"}</button></div></div></article>`).join('')||`<p>${lang==="ar"?"لا توجد نتائج":"No results"}</p>`}
+function details(name){document.getElementById('modalTitle').textContent=name;document.getElementById('modalText').textContent=lang==="ar"?"سنضيف هنا وصف اللعبة ومتطلبات التشغيل وروابط المتاجر والمصادر الرسمية بعد تجهيز بيانات موثوقة لكل لعبة.":"Game description, system requirements, and verified official store links will be added here.";document.getElementById('modalNote').textContent=lang==="ar"?"لا توجد روابط تحميل مباشرة أو نسخ غير مرخصة في هذه النسخة التجريبية.":"No direct downloads or unlicensed copies are provided in this prototype.";document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('search').addEventListener('input',render);document.getElementById('filter').addEventListener('change',render);
+document.getElementById('lang').onclick=()=>{lang=lang==="ar"?"en":"ar";document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.querySelectorAll('[data-ar]').forEach(el=>el.textContent=el.dataset[lang]);document.getElementById('lang').textContent=lang==="ar"?"English":"العربية";document.getElementById('search').placeholder=lang==="ar"?"ابحث عن لعبة...":"Search games...";let opts=document.querySelectorAll('#filter option');opts[0].textContent=lang==="ar"?"كل التصنيفات":"All categories";opts[1].textContent=lang==="ar"?"أكشن ومغامرات":"Action & Adventure";opts[2].textContent=lang==="ar"?"سباق":"Racing";opts[3].textContent=lang==="ar"?"تصويب":"Shooter";render()};
+render();
+</script>
+</body></html>
